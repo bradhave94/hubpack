@@ -1,0 +1,48 @@
+{
+	"children": [
+		{
+			"default": false,
+			"display": "checkbox",
+			"help_text": "Will animate the content/copy section of the header banner",
+			"id": "bdb2b290-1647-dc68-941a-fc2ac343938e",
+			"label": "Animate Content?",
+			"locked": false,
+			"name": "animate_content",
+			"required": false,
+			"type": "boolean"
+		},
+		{
+			"choices": [
+				["fade-up", "Fade Up"],
+				["fade-down", "Fade Down"],
+				["fade-left", "Fade Left"],
+				["fade-right", "Fade Right"]
+			],
+			"default": "fade-up",
+			"display": "select",
+			"id": "9a0de064-8dcd-d8f9-2104-c0e318d40afa",
+			"label": "Content Animation Direction",
+			"locked": false,
+			"name": "type",
+			"required": false,
+			"type": "choice",
+			"visibility": {
+				"controlling_field": "bdb2b290-1647-dc68-941a-fc2ac343938e",
+				"controlling_value_regex": "true",
+				"operator": "EQUAL"
+			}
+		}
+	],
+	"default": {
+		"animate_content": false,
+		"type": "fade-up"
+	},
+	"expanded": false,
+	"id": "3b2b8d46-09e4-dc25-05e3-081a52d52172",
+	"label": "Animations",
+	"locked": false,
+	"name": "animations",
+	"required": false,
+	"tab": "CONTENT",
+	"type": "group"
+}
