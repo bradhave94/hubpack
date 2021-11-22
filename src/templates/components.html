@@ -5,219 +5,46 @@
 -->
 {% extends './layouts/base.html' %}
 
+{% macro font_styles(font, label) %}
+<div class="md:flex border-b-2 mb-3 pb-4 divide-solid">
+  <div class="py-4 md:w-2/12">
+    <p class="font-bold text-xl">{{label}}</p>
+    <p class="text-gray-500">{{font.font.font }}</p>
+    <p class="uppercase text-gray-500 mt-6 text-sm font-bold mb-1">Size / Line height</p>
+    <p>{{font.font.size}}px / {{font.line_height }}{% if font.line_height_unit != 'number' %}{{font.line_height_unit}}{% endif %}<span class="text-sm text-gray-500 pl-2">Desktop</span></p>
+    {% if font.letter_spacing != 0 %}
+    <p class="uppercase text-gray-500 mt-6 text-sm font-bold mb-1">
+      Letter Spacing
+    </p>
+    <p>0px</p>
+    {% endif %}
+  </div>
+  <div class="py-4 md:px-10 md:w-3/4">
+    <p class="truncate text-{{label}}">The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</p>
+  </div>
+</div>
+{% endmacro %}
+
 {% block body %}
 
 <div class="container">
 
-  <div>
-    <h3 class="text-5xl mb-10 font-bold">Typography</h3>
-    <h4 class="border-b-2 mb-3 pb-4 divide-solid font-bold">Headings</h4>
+    <h1 class="text-6xl mb-10">Typography</h1>
 
-    <div class="md:flex border-b-2 mb-3 pb-4 divide-solid">
-      <div class="py-4 md:w-2/12">
-        <p class="font-bold text-xl">H1</p>
-        <p>{{theme.typography.h1.font.font }}</p>
-        <p class="uppercase text-gray-500 mt-6 text-sm font-bold mb-1">Size / Line height</p>
-        <p>{{theme.typography.h1.font.size}} / {{theme.typography.h1.line_height }}<span class="text-sm text-gray-500 pl-2">Desktop</span></p>
-        <p>{{(theme.typography.h1.font.size * .80)|round(1)}} / {{(theme.typography.h1.line_height * .80)|round(1)}}<span class="text-sm text-gray-500 pl-2">Mobile</span></p>
-        <p class="uppercase text-gray-500 mt-6 text-sm font-bold mb-1">
-          Letter Spacing
-        </p>
-        <p>0px</p>
-      </div>
-      <div class="py-4 md:px-10 md:w-3/4">
-        <h1>The quick brown fox jumps over the lazy dog.</h1>
-      </div>
-    </div>
+    {{ font_styles(theme.typography.xs, 'xs') }}
+    {{ font_styles(theme.typography.sm, 'sm') }}
+    {{ font_styles(theme.typography.base, 'base') }}
+    {{ font_styles(theme.typography.lg, 'lg') }}
+    {{ font_styles(theme.typography.xl, 'xl') }}
+    {{ font_styles(theme.typography.two_xl, '2xl') }}
+    {{ font_styles(theme.typography.three_xl, '3xl') }}
+    {{ font_styles(theme.typography.four_xl, '4xl') }}
+    {{ font_styles(theme.typography.five_xl, '5xl') }}
+    {{ font_styles(theme.typography.six_xl, '6xl') }}
+    {{ font_styles(theme.typography.seven_xl, '7xl') }}
+    {{ font_styles(theme.typography.eight_xl, '8xl') }}
+    {{ font_styles(theme.typography.nine_xl, '9xl') }}
 
-  </div>
-
-  <div class="md:flex border-b-2 mb-3 pb-4 divide-solid">
-    <div class="py-4 md:w-2/12">
-      <p class="font-bold text-xl">H2</p>
-      <p>{{theme.typography.h2.font.font }}</p>
-      <p class="uppercase text-gray-500 mt-6 text-sm font-bold mb-1">Size / Line height</p>
-      <p>{{theme.typography.h2.font.size}} / {{theme.typography.h2.line_height }}<span class="text-sm text-gray-500 pl-2">Desktop</span></p>
-      <p>{{(theme.typography.h2.font.size * .80)|round(1)}} / {{(theme.typography.h2.line_height * .80)|round(1)}}<span class="text-sm text-gray-500 pl-2">Mobile</span></p>
-      <p class="uppercase text-gray-500 mt-6 text-sm font-bold mb-1">
-        Letter Spacing
-      </p>
-      <p>0px</p>
-    </div>
-    <div class="py-4 md:px-10 md:w-3/4">
-      <h2>The quick brown fox jumps over the lazy dog.</h2>
-    </div>
-  </div>
-
-  <div class="md:flex border-b-2 mb-3 pb-4 divide-solid">
-    <div class="py-4 md:w-2/12">
-      <p class="font-bold text-xl">H3</p>
-      <p>{{theme.typography.h3.font.font }}</p>
-      <p class="uppercase text-gray-500 mt-6 text-sm font-bold mb-1">Size / Line height</p>
-      <p>{{theme.typography.h3.font.size}} / {{theme.typography.h3.line_height }}<span class="text-sm text-gray-500 pl-2">Desktop</span></p>
-      <p>{{(theme.typography.h3.font.size * .80)|round(1)}} / {{(theme.typography.h3.line_height * .80)|round(1)}}<span class="text-sm text-gray-500 pl-2">Mobile</span></p>
-      <p class="uppercase text-gray-500 mt-6 text-sm font-bold mb-1">
-        Letter Spacing
-      </p>
-      <p>0px</p>
-    </div>
-    <div class="py-4 md:px-10 md:w-3/4">
-      <h3>The quick brown fox jumps over the lazy dog.</h3>
-    </div>
-  </div>
-
-  <div class="md:flex border-b-2 mb-3 pb-4 divide-solid">
-    <div class="py-4 md:w-2/12">
-      <p class="font-bold text-xl">H4</p>
-      <p>{{theme.typography.h4.font.font }}</p>
-      <p class="uppercase text-gray-500 mt-6 text-sm font-bold mb-1">Size / Line height</p>
-      <p>{{theme.typography.h4.font.size}} / {{theme.typography.h4.line_height }}<span class="text-sm text-gray-500 pl-2">Desktop</span></p>
-      <p>{{(theme.typography.h4.font.size * .80)|round(1)}} / {{(theme.typography.h4.line_height * .80)|round(1)}}<span class="text-sm text-gray-500 pl-2">Mobile</span></p>
-      <p class="uppercase text-gray-500 mt-6 text-sm font-bold mb-1">
-        Letter Spacing
-      </p>
-      <p>0px</p>
-    </div>
-    <div class="py-4 md:px-10 md:w-3/4">
-      <h4>The quick brown fox jumps over the lazy dog.</h4>
-    </div>
-  </div>
-
-  <div class="md:flex border-b-2 mb-3 pb-4 divide-solid">
-    <div class="py-4 md:w-2/12">
-      <p class="font-bold text-xl">H5</p>
-      <p>{{theme.typography.h5.font.font }}</p>
-      <p class="uppercase text-gray-500 mt-6 text-sm font-bold mb-1">Size / Line height</p>
-      <p>{{theme.typography.h5.font.size}} / {{theme.typography.h5.line_height }}<span class="text-sm text-gray-500 pl-2">Desktop</span></p>
-      <p>{{(theme.typography.h5.font.size * .80)|round(1)}} / {{(theme.typography.h5.line_height * .80)|round(1)}}<span class="text-sm text-gray-500 pl-2">Mobile</span></p>
-      <p class="uppercase text-gray-500 mt-6 text-sm font-bold mb-1">
-        Letter Spacing
-      </p>
-      <p>0px</p>
-    </div>
-    <div class="py-4 md:px-10 md:w-3/4">
-      <h5>The quick brown fox jumps over the lazy dog.</h5>
-    </div>
-  </div>
-
-  <div class="md:flex border-b-2 mb-3 pb-4 divide-solid">
-    <div class="py-4 md:w-2/12">
-      <p class="font-bold text-xl">H6</p>
-      <p>{{theme.typography.h6.font.font }}</p>
-      <p class="uppercase text-gray-500 mt-6 text-sm font-bold mb-1">Size / Line height</p>
-      <p>{{theme.typography.h6.font.size}} / {{theme.typography.h6.line_height }}<span class="text-sm text-gray-500 pl-2">Desktop</span></p>
-      <p>{{(theme.typography.h6.font.size * .80)|round(1)}} / {{(theme.typography.h6.line_height * .80)|round(1)}}<span class="text-sm text-gray-500 pl-2">Mobile</span></p>
-      <p class="uppercase text-gray-500 mt-6 text-sm font-bold mb-1">
-        Letter Spacing
-      </p>
-      <p>0px</p>
-    </div>
-    <div class="py-4 md:px-10 md:w-3/4">
-      <h6>The quick brown fox jumps over the lazy dog.</h6>
-    </div>
-  </div>
-
-  <div class="md:flex border-b-2 mb-3 pb-4 divide-solid">
-    <div class="py-4 md:w-2/12">
-      <p class="font-bold text-xl">xl</p>
-      <p>{{theme.typography.h6.font.font }}</p>
-      <p class="uppercase text-gray-500 mt-6 text-sm font-bold mb-1">Size / Line height</p>
-      <p>{{theme.typography.h6.font.size}} / {{theme.typography.h6.line_height }}<span class="text-sm text-gray-500 pl-2">Desktop</span></p>
-      <p>{{(theme.typography.h6.font.size * .80)|round(1)}} / {{(theme.typography.h6.line_height * .80)|round(1)}}<span class="text-sm text-gray-500 pl-2">Mobile</span></p>
-      <p class="uppercase text-gray-500 mt-6 text-sm font-bold mb-1">
-        Letter Spacing
-      </p>
-      <p>0px</p>
-    </div>
-    <div class="py-4 md:px-10 md:w-3/4">
-      <p class="text-xl">The quick brown fox jumps over the lazy dog.</p>
-    </div>
-  </div>
-
-  <div class="md:flex border-b-2 mb-3 pb-4 divide-solid">
-    <div class="py-4 md:w-2/12">
-      <p class="font-bold text-xl">2xl</p>
-      <p>{{theme.typography.h6.font.font }}</p>
-      <p class="uppercase text-gray-500 mt-6 text-sm font-bold mb-1">Size / Line height</p>
-      <p>{{theme.typography.h6.font.size}} / {{theme.typography.h6.line_height }}<span class="text-sm text-gray-500 pl-2">Desktop</span></p>
-      <p>{{(theme.typography.h6.font.size * .80)|round(1)}} / {{(theme.typography.h6.line_height * .80)|round(1)}}<span class="text-sm text-gray-500 pl-2">Mobile</span></p>
-      <p class="uppercase text-gray-500 mt-6 text-sm font-bold mb-1">
-        Letter Spacing
-      </p>
-      <p>0px</p>
-    </div>
-    <div class="py-4 md:px-10 md:w-3/4">
-      <p class="text-2xl">The quick brown fox jumps over the lazy dog.</p>
-    </div>
-  </div>
-
-  <div class="md:flex border-b-2 mb-3 pb-4 divide-solid">
-    <div class="py-4 md:w-2/12">
-      <p class="font-bold text-xl">3xl</p>
-      <p>{{theme.typography.h6.font.font }}</p>
-      <p class="uppercase text-gray-500 mt-6 text-sm font-bold mb-1">Size / Line height</p>
-      <p>{{theme.typography.h6.font.size}} / {{theme.typography.h6.line_height }}<span class="text-sm text-gray-500 pl-2">Desktop</span></p>
-      <p>{{(theme.typography.h6.font.size * .80)|round(1)}} / {{(theme.typography.h6.line_height * .80)|round(1)}}<span class="text-sm text-gray-500 pl-2">Mobile</span></p>
-      <p class="uppercase text-gray-500 mt-6 text-sm font-bold mb-1">
-        Letter Spacing
-      </p>
-      <p>0px</p>
-    </div>
-    <div class="py-4 md:px-10 md:w-3/4">
-      <p class="text-3xl">The quick brown fox jumps over the lazy dog.</p>
-    </div>
-  </div>
-
-  <div class="md:flex border-b-2 mb-3 pb-4 divide-solid">
-    <div class="py-4 md:w-2/12">
-      <p class="font-bold text-xl">4xl</p>
-      <p>{{theme.typography.h6.font.font }}</p>
-      <p class="uppercase text-gray-500 mt-6 text-sm font-bold mb-1">Size / Line height</p>
-      <p>{{theme.typography.h6.font.size}} / {{theme.typography.h6.line_height }}<span class="text-sm text-gray-500 pl-2">Desktop</span></p>
-      <p>{{(theme.typography.h6.font.size * .80)|round(1)}} / {{(theme.typography.h6.line_height * .80)|round(1)}}<span class="text-sm text-gray-500 pl-2">Mobile</span></p>
-      <p class="uppercase text-gray-500 mt-6 text-sm font-bold mb-1">
-        Letter Spacing
-      </p>
-      <p>0px</p>
-    </div>
-    <div class="py-4 md:px-10 md:w-3/4">
-      <p class="text-4xl">The quick brown fox jumps over the lazy dog.</p>
-    </div>
-  </div>
-
-  <div class="md:flex border-b-2 mb-3 pb-4 divide-solid">
-    <div class="py-4 md:w-2/12 w-">
-      <p class="font-bold text-xl">lg</p>
-      <p>{{theme.typography.h6.font.font }}</p>
-      <p class="uppercase text-gray-500 mt-6 text-sm font-bold mb-1">Size / Line height</p>
-      <p>{{theme.typography.h6.font.size}} / {{theme.typography.h6.line_height }}<span class="text-sm text-gray-500 pl-2">Desktop</span></p>
-      <p>{{(theme.typography.h6.font.size * .80)|round(1)}} / {{(theme.typography.h6.line_height * .80)|round(1)}}<span class="text-sm text-gray-500 pl-2">Mobile</span></p>
-      <p class="uppercase text-gray-500 mt-6 text-sm font-bold mb-1">
-        Letter Spacing
-      </p>
-      <p>0px</p>
-    </div>
-    <div class="py-4 md:px-10 md:w-3/4">
-      <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-  </div>
-
-  <div class="md:flex border-b-2 mb-3 pb-4 divide-solid">
-    <div class="py-4 md:w-2/12 w-">
-      <p class="font-bold text-xl">P</p>
-      <p>{{theme.typography.h6.font.font }}</p>
-      <p class="uppercase text-gray-500 mt-6 text-sm font-bold mb-1">Size / Line height</p>
-      <p>{{theme.typography.h6.font.size}} / {{theme.typography.h6.line_height }}<span class="text-sm text-gray-500 pl-2">Desktop</span></p>
-      <p>{{(theme.typography.h6.font.size * .80)|round(1)}} / {{(theme.typography.h6.line_height * .80)|round(1)}}<span class="text-sm text-gray-500 pl-2">Mobile</span></p>
-      <p class="uppercase text-gray-500 mt-6 text-sm font-bold mb-1">
-        Letter Spacing
-      </p>
-      <p>0px</p>
-    </div>
-    <div class="py-4 md:px-10 md:w-3/4">
-      <p class="text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-  </div>
 
 </div>
 
@@ -235,6 +62,62 @@
     <button type="button" class="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 mb-3">Purple</button>
   </div>
 </div>
+
+
+<!-- This example requires Tailwind CSS v2.0+ -->
+<div class="relative bg-white overflow-hidden">
+  <div class="pt-16 pb-80 sm:pt-24 sm:pb-40 lg:pt-40 lg:pb-48">
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:static">
+      <div class="sm:max-w-lg">
+        <h1 class="text-4xl font font-extrabold tracking-tight text-gray-900 sm:text-6xl">
+          Summer styles are finally here
+        </h1>
+        <p class="mt-4 text-xl text-gray-500">This year, our new summer collection will shelter you from the harsh elements of a world that doesn't care if you live or die.</p>
+      </div>
+      <div>
+        <div class="mt-10">
+          <!-- Decorative image grid -->
+          <div aria-hidden="true" class="pointer-events-none lg:absolute lg:inset-y-0 lg:max-w-7xl lg:mx-auto lg:w-full">
+            <div class="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
+              <div class="flex items-center space-x-6 lg:space-x-8">
+                <div class="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
+                  <div class="w-44 h-64 rounded-lg overflow-hidden sm:opacity-0 lg:opacity-100">
+                    <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-01.jpg" alt="" class="w-full h-full object-center object-cover">
+                  </div>
+                  <div class="w-44 h-64 rounded-lg overflow-hidden">
+                    <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-02.jpg" alt="" class="w-full h-full object-center object-cover">
+                  </div>
+                </div>
+                <div class="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
+                  <div class="w-44 h-64 rounded-lg overflow-hidden">
+                    <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-03.jpg" alt="" class="w-full h-full object-center object-cover">
+                  </div>
+                  <div class="w-44 h-64 rounded-lg overflow-hidden">
+                    <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-04.jpg" alt="" class="w-full h-full object-center object-cover">
+                  </div>
+                  <div class="w-44 h-64 rounded-lg overflow-hidden">
+                    <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-05.jpg" alt="" class="w-full h-full object-center object-cover">
+                  </div>
+                </div>
+                <div class="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
+                  <div class="w-44 h-64 rounded-lg overflow-hidden">
+                    <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-06.jpg" alt="" class="w-full h-full object-center object-cover">
+                  </div>
+                  <div class="w-44 h-64 rounded-lg overflow-hidden">
+                    <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-07.jpg" alt="" class="w-full h-full object-center object-cover">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <a href="#" class="inline-block text-center bg-indigo-600 border border-transparent rounded-md py-3 px-8 font-medium text-white hover:bg-indigo-700">Shop Collection</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 
 {% endblock body %}

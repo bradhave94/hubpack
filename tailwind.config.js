@@ -43,77 +43,70 @@ module.exports = {
 					lineHeight: '1.5rem',
 				},
 			],
-			h6: [
+			lg: [
 				'1.125rem',
 				{
 					letterSpacing: '0',
 					lineHeight: '1.75rem',
 				},
 			],
-			h5: [
+			xl: [
 				'1.25rem',
 				{
 					letterSpacing: '0',
 					lineHeight: '1.75rem',
 				},
 			],
-			h4: [
+			'2xl': [
 				'1.5rem',
 				{
 					letterSpacing: '0',
 					lineHeight: '2rem',
 				},
 			],
-			h3: [
+			'3xl': [
 				'1.875rem',
 				{
 					letterSpacing: '0',
 					lineHeight: '2.25rem',
 				},
 			],
-			h2: [
+			'4xl': [
 				'2.25rem',
 				{
 					letterSpacing: '0',
 					lineHeight: '2.5rem',
 				},
 			],
-			h1: [
+			'5xl': [
 				'3rem',
 				{
 					letterSpacing: '0',
 					lineHeight: '1',
 				},
 			],
-			lg: [
-				'1.5rem',
-				{
-					letterSpacing: '0',
-					lineHeight: '1.75rem',
-				},
-			],
-			xl: [
+			'6xl': [
 				'3.75rem',
 				{
 					letterSpacing: '0',
 					lineHeight: '1',
 				},
 			],
-			'2xl': [
+			'7xl': [
 				'4.5rem',
 				{
 					letterSpacing: '0',
 					lineHeight: '1',
 				},
 			],
-			'3xl': [
+			'8xl': [
 				'6rem',
 				{
 					letterSpacing: '0',
 					lineHeight: '1',
 				},
 			],
-			'4xl': [
+			'9xl': [
 				'8rem',
 				{
 					letterSpacing: '0',
@@ -139,4 +132,8 @@ module.exports = {
 		extend: {},
 	},
 	plugins: [],
+	corePlugins: {
+		// ...
+		fontSize: false,
+	},
 };
