@@ -16,9 +16,10 @@ module.exports = {
 			colors: {
 				primary: withOpacity('--color-primary'),
 				secondary: withOpacity('--color-secondary'),
-
-				white: withOpacity('--color-white'),
-				black: withOpacity('--color-black'),
+				tertiary: withOpacity('--color-tertiary'),
+				'accent-one': withOpacity('--color-accent-one'),
+				'accent-two': withOpacity('--color-accent-two'),
+				'accent-three': withOpacity('--color-accent-three'),
 			},
 		},
 		fontSize: {
@@ -131,7 +132,11 @@ module.exports = {
 	variants: {
 		extend: {},
 	},
-	plugins: [],
+	plugins: [
+		require('@tailwindcss/forms')({
+			strategy: 'class',
+		}),
+	],
 	corePlugins: {
 		// ...
 		fontSize: false,

@@ -17,6 +17,7 @@
 		"@hubspot/webpack-cms-plugins": "^3.0.6",
 		"@igomoon/hubspot-fields-js": "^1.1.6",
 		"@spingroup/postcss-hubl": "^1.1.4",
+		"@tailwindcss/forms": "^0.3.4",
 		"autoprefixer": "^10.3.1",
 		"babel-loader": "^8.2.2",
 		"copy-webpack-plugin": "^9.0.1",

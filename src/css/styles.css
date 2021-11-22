@@ -3,10 +3,120 @@
 @tailwind utilities;
 
 @layer base {
-    :root {
-        --color-primary: 85, 108, 211;
-        --color-secondary: 131, 68, 122;
-        --color-white: 255, 255, 255;
-        --color-black: 0, 0, 0;
+    [type='text'],
+    [type='email'],
+    [type='url'],
+    [type='password'],
+    [type='number'],
+    [type='date'],
+    [type='datetime-local'],
+    [type='month'],
+    [type='search'],
+    [type='tel'],
+    [type='time'],
+    [type='week'] {
+        @apply form-input !w-full border-gray-300
     }
+
+    input[type=file]::file-selector-button {
+        @apply bg-white py-2 px-3 border border-gray-300 rounded-md shadow-sm leading-4 font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary
+    }
+
+    textarea {
+        @apply form-textarea !w-full border-gray-300
+    }
+
+    select {
+        @apply form-select !w-full border-gray-300
+    }
+
+    select[multiple] {
+        @apply form-multiselect border-gray-300
+    }
+
+    [type='checkbox'] {
+        @apply form-checkbox !w-4 !mr-3 rounded border-gray-300
+    }
+
+    [type='radio'] {
+        @apply form-radio !w-4 !mr-3 border-gray-300
+    }
+
+    blockquote {
+        @apply border-gray-200 border-l-4 font-bold italic pl-8
+    }
+
+}
+
+@layer components {
+    .btn {
+        @apply inline-flex items-center border border-transparent font-medium rounded-md shadow-sm
+    }
+    .btn-outline {
+        @apply inline-flex items-center border shadow-sm font-medium rounded-md
+    }
+    .btn-sm {
+        @apply px-3 py-1.5
+    }
+    .btn-md {
+        @apply px-6 py-3
+    }
+    .btn-lg {
+        @apply px-8 py-4
+    }
+
+    .btn-primary {
+        @apply bg-primary hover:bg-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary
+    }
+    .btn-outline-primary {
+        @apply border-primary text-primary hover:bg-primary hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary
+    }
+    .btn-secondary {
+        @apply bg-secondary hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary
+    }
+    .btn-outline-secondary {
+        @apply border-secondary text-secondary hover:bg-secondary hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary
+    }
+    .btn-tertiary {
+        @apply bg-tertiary hover:bg-tertiary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-tertiary
+    }
+    .btn-outline-tertiary {
+        @apply border-tertiary text-tertiary hover:bg-tertiary hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-tertiary
+    }
+    .btn-accent-one {
+        @apply bg-accent-one hover:bg-accent-one focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent-one
+    }
+    .btn-outline-accent-one {
+        @apply border-accent-one text-accent-one hover:bg-accent-one hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent-one
+    }
+    .btn-accent-two {
+        @apply bg-accent-two hover:bg-accent-two focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent-two
+    }
+    .btn-outline-accent-two {
+        @apply border-accent-two text-accent-two hover:bg-accent-two hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent-two
+    }
+    .btn-accent-three {
+        @apply bg-accent-three hover:bg-accent-three focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent-three
+    }
+    .btn-outline-accent-three {
+        @apply border-accent-three text-accent-three hover:bg-accent-three hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent-three
+    }
+
+    .btn-white {
+        @apply bg-white hover:bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white text-black
+    }
+    .btn-outline-white {
+        @apply border-white text-white hover:bg-white hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white
+    }
+    .btn-black {
+        @apply bg-black hover:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black text-white
+    }
+    .btn-outline-black {
+        @apply border-black text-black hover:bg-black hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black
+    }
+
+    input[type=submit] {
+        @apply btn btn-sm btn-primary
+    }
+
 }

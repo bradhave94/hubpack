@@ -14,7 +14,7 @@
 					}
 				},
 				"default": {
-					"color": "#0A2239"
+					"color": "#f72585"
 				}
 			},
 			{
@@ -27,7 +27,7 @@
 					}
 				},
 				"default": {
-					"color": "#39304A"
+					"color": "#7209b7"
 				}
 			},
 			{
@@ -40,7 +40,7 @@
 					}
 				},
 				"default": {
-					"color": "#39304A"
+					"color": "#3f37c9"
 				}
 			},
 			{
@@ -53,7 +53,7 @@
 					}
 				},
 				"default": {
-					"color": "#39304A"
+					"color": "#457b9d"
 				}
 			},
 			{
@@ -66,7 +66,7 @@
 					}
 				},
 				"default": {
-					"color": "#39304A"
+					"color": "#6a994e"
 				}
 			},
 			{
@@ -79,7 +79,7 @@
 					}
 				},
 				"default": {
-					"color": "#39304A"
+					"color": "#fb8500"
 				}
 			},
 			{
@@ -92,7 +92,7 @@
 					}
 				},
 				"default": {
-					"color": "#39304A"
+					"color": "#16131d"
 				}
 			},
 			{
@@ -105,7 +105,7 @@
 					}
 				},
 				"default": {
-					"color": "#39304A"
+					"color": "#39304a"
 				}
 			},
 			{
@@ -118,33 +118,7 @@
 					}
 				},
 				"default": {
-					"color": "#39304A"
-				}
-			},
-			{
-				"label": "Link Hover",
-				"name": "link_hover",
-				"type": "color",
-				"visibility": {
-					"hidden_subfields": {
-						"opacity": true
-					}
-				},
-				"default": {
-					"color": "#39304A"
-				}
-			},
-			{
-				"label": "Link Focus",
-				"name": "link_focus",
-				"type": "color",
-				"visibility": {
-					"hidden_subfields": {
-						"opacity": true
-					}
-				},
-				"default": {
-					"color": "#39304A"
+					"color": "#560bad"
 				}
 			},
 			{
@@ -157,7 +131,7 @@
 					}
 				},
 				"default": {
-					"color": "#39304A"
+					"color": "#e9ecef"
 				}
 			},
 			{
@@ -170,7 +144,7 @@
 					}
 				},
 				"default": {
-					"color": "#39304A"
+					"color": "#343a40"
 				}
 			}
 		]

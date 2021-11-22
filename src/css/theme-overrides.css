@@ -115,8 +115,6 @@
 {##################   2. Containers / Grid / DND areas   ###################}
 {###########################################################################}
 
-
-
 @media(min-width: {{ container_width }}) {
   .container {
       max-width: {{ container_width }};
@@ -158,7 +156,6 @@ a:focus {
 
 blockquote,
 .blockquote {
-  border-left-color: {{ secondary_color }};
 }
 
 h6, h5, h4, h3, h2, h1 {
