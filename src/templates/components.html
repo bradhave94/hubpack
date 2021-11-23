@@ -53,28 +53,71 @@
     {{ font_styles(theme.typography.eight_xl, '8xl') }}
     {{ font_styles(theme.typography.nine_xl, '9xl') }}
 
-    <div class="md:flex border-b-2 mb-3 pb-4 divide-solid">
-      <div class="py-4 md:w-2/12">
-        <p class="font-bold text-xl">{{label}}</p>
-        <p class="text-gray-500">{{font.font.font }}</p>
-        <p class="uppercase text-gray-500 mt-6 text-sm font-bold mb-1">Size / Line height</p>
-        <p>{{font.font.size}}px / {{font.line_height }}{% if font.line_height_unit != 'number' %}{{font.line_height_unit}}{% endif %}<span class="text-sm text-gray-500 pl-2">Desktop</span></p>
-        {% if font.letter_spacing != 0 %}
-        <p class="uppercase text-gray-500 mt-6 text-sm font-bold mb-1">
-          Letter Spacing
-        </p>
-        <p>0px</p>
-        {% endif %}
-      </div>
-      <div class="py-4 md:px-10 md:w-3/4">
-        <blockquote class="text-{{label}}">The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</blockquote>
-      </div>
+    <div class="mb-10 pt-8">
+      <h1>H1 - The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox
+        jumps over the lazy dog.</h1>
+    </div>
+    <div class="mb-10">
+      <h2>H2 - The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox
+        jumps over the lazy dog.</h2>
+    </div>
+    <div class="mb-10">
+      <h3>H3 - The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox
+        jumps over the lazy dog.</h3>
+    </div>
+    <div class="mb-10">
+      <h4>H4 - The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox
+        jumps over the lazy dog.</h4>
+    </div>
+    <div class="mb-10">
+      <h5>H5 - The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox
+        jumps over the lazy dog.</h5>
+    </div>
+    <div class="mb-10">
+      <h6>H6 - The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox
+        jumps over the lazy dog.</h6>
+    </div>
+    <div class="mb-10">
+      <p>p - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a nisl a ipsum convallis consequat.
+        Integer id felis a libero finibus convallis. Aenean consequat quam blandit luctus rhoncus. Curabitur in lobortis
+        turpis.</p>
+    </div>
+    <div class="mb-10">
+      <p class="small">p.small - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a nisl a ipsum
+        convallis consequat. Integer id felis a libero finibus convallis. Aenean consequat quam blandit luctus rhoncus.
+        Curabitur in lobortis turpis.</p>
+    </div>
+    <div class="mb-10">
+      <p class="large">p.large - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a nisl a ipsum
+        convallis consequat. Integer id felis a libero finibus convallis. Aenean consequat quam blandit luctus rhoncus.
+        Curabitur in lobortis turpis.</p>
+    </div>
+    <div class="mb-10">
+      <ul class="mb-10">
+        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+        <li>Pellentesque a nisl a ipsum convallis consequat. Integer id felis a libero finibus convallis.</li>
+        <li>Aenean consequat quam blandit luctus rhoncus. Curabitur in lobortis turpis.</li>
+      </ul>
+      <ol>
+        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+        <li>Pellentesque a nisl a ipsum convallis consequat. Integer id felis a libero finibus convallis.</li>
+        <li>Aenean consequat quam blandit luctus rhoncus. Curabitur in lobortis turpis.</li>
+      </ol>
+    </div>
+    <div class="mb-10">
+      <blockquote>“Blockquote - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a nisl a ipsum
+        convallis consequat. Integer id felis a libero finibus convallis. Aenean consequat quam blandit luctus rhoncus.
+        Curabitur in lobortis turpis.”</blockquote>
+    </div>
+    <div class="mb-10">
+      <p><a href="#">This is a link</a> lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed sapien magna. Morbi
+        ac arcu eu tortor condimentum pellentesque.</p>
     </div>
 
 
 
     <h1 class="text-6xl mb-10 mt-20">Colors</h1>
-    <dl class="mt-12 space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:grid-cols-4 lg:gap-x-2">
+    <dl class="mt-12 space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:grid-cols-3 lg:gap-x-2">
       <div class="color">
         <div class="color-swatch w-72 h-52 bg-primary"></div>
         <div class="color-name font-bold text-xl">Primary</div>
@@ -110,191 +153,96 @@
     <h1 class="text-6xl mb-10 mt-20">Buttons</h1>
     <h3 class="text-2xl">Primary</h3>
     <div class="mx-auto space-y-4 flex flex-col items-center justify-start sm:space-y-0 sm:flex-row sm:items-end sm:justify-between">
-      <button type="button" class="btn btn-sm btn-primary">
-        Button text
-      </button>
-      <button type="button" class="btn btn-md btn-primary">
-        Button text
-      </button>
-      <button type="button" class="btn btn-lg btn-primary">
-        Button text
-      </button>
-      <button type="button" class="btn-outline btn-sm btn-outline-primary">
-        Button text
-      </button>
-      <button type="button" class="btn-outline btn-md btn-outline-primary">
-        Button text
-      </button>
-      <button type="button" class="btn-outline btn-lg btn-outline-primary">
-        Button text
-      </button>
+      <button type="button" class="btn btn-sm btn-primary">Button text</button>
+      <button type="button" class="btn btn-md btn-primary">Button text</button>
+      <button type="button" class="btn btn-lg btn-primary">Button text</button>
+      <button type="button" class="btn-outline btn-sm btn-outline-primary">Button text</button>
+      <button type="button" class="btn-outline btn-md btn-outline-primary">Button text</button>
+      <button type="button" class="btn-outline btn-lg btn-outline-primary">Button text</button>
     </div>
 
     <h3 class="text-2xl mt-10">Secondary</h3>
     <div class="mx-auto space-y-4 flex flex-col items-center justify-start sm:space-y-0 sm:flex-row sm:items-end sm:justify-between">
-      <button type="button" class="btn btn-sm btn-secondary">
-        Button text
-      </button>
-      <button type="button" class="btn btn-md btn-secondary">
-        Button text
-      </button>
-      <button type="button" class="btn btn-lg btn-secondary">
-        Button text
-      </button>
-      <button type="button" class="btn-outline btn-sm btn-outline-secondary">
-        Button text
-      </button>
-      <button type="button" class="btn-outline btn-md btn-outline-secondary">
-        Button text
-      </button>
-      <button type="button" class="btn-outline btn-lg btn-outline-secondary">
-        Button text
-      </button>
+      <button type="button" class="btn btn-sm btn-secondary">Button text</button>
+      <button type="button" class="btn btn-md btn-secondary">Button text</button>
+      <button type="button" class="btn btn-lg btn-secondary">Button text</button>
+      <button type="button" class="btn-outline btn-sm btn-outline-secondary">Button text</button>
+      <button type="button" class="btn-outline btn-md btn-outline-secondary">Button text</button>
+      <button type="button" class="btn-outline btn-lg btn-outline-secondary">Button text</button>
     </div>
 
     <h3 class="text-2xl mt-10">Tertiary</h3>
     <div class="mx-auto space-y-4 flex flex-col items-center justify-start sm:space-y-0 sm:flex-row sm:items-end sm:justify-between">
-      <button type="button" class="btn btn-sm btn-tertiary">
-        Button text
-      </button>
-      <button type="button" class="btn btn-md btn-tertiary">
-        Button text
-      </button>
-      <button type="button" class="btn btn-lg btn-tertiary">
-        Button text
-      </button>
-      <button type="button" class="btn-outline btn-sm btn-outline-tertiary">
-        Button text
-      </button>
-      <button type="button" class="btn-outline btn-md btn-outline-tertiary">
-        Button text
-      </button>
-      <button type="button" class="btn-outline btn-lg btn-outline-tertiary">
-        Button text
-      </button>
+      <button type="button" class="btn btn-sm btn-tertiary">Button text</button>
+      <button type="button" class="btn btn-md btn-tertiary">Button text</button>
+      <button type="button" class="btn btn-lg btn-tertiary">Button text</button>
+      <button type="button" class="btn-outline btn-sm btn-outline-tertiary">Button text</button>
+      <button type="button" class="btn-outline btn-md btn-outline-tertiary">Button text</button>
+      <button type="button" class="btn-outline btn-lg btn-outline-tertiary">Button text</button>
     </div>
 
     <h3 class="text-2xl mt-10">Accent One</h3>
     <div class="mx-auto space-y-4 flex flex-col items-center justify-start sm:space-y-0 sm:flex-row sm:items-end sm:justify-between">
-      <button type="button" class="btn btn-sm btn-accent-one">
-        Button text
-      </button>
-      <button type="button" class="btn btn-md btn-accent-one">
-        Button text
-      </button>
-      <button type="button" class="btn btn-lg btn-accent-one">
-        Button text
-      </button>
-      <button type="button" class="btn-outline btn-sm btn-outline-accent-one">
-        Button text
-      </button>
-      <button type="button" class="btn-outline btn-md btn-outline-accent-one">
-        Button text
-      </button>
-      <button type="button" class="btn-outline btn-lg btn-outline-accent-one">
-        Button text
-      </button>
+      <button type="button" class="btn btn-sm btn-accent-one">Button text</button>
+      <button type="button" class="btn btn-md btn-accent-one">Button text</button>
+      <button type="button" class="btn btn-lg btn-accent-one">Button text</button>
+      <button type="button" class="btn-outline btn-sm btn-outline-accent-one">Button text</button>
+      <button type="button" class="btn-outline btn-md btn-outline-accent-one">Button text</button>
+      <button type="button" class="btn-outline btn-lg btn-outline-accent-one">Button text</button>
     </div>
 
     <h3 class="text-2xl mt-10">Accent Two</h3>
     <div class="mx-auto space-y-4 flex flex-col items-center justify-start sm:space-y-0 sm:flex-row sm:items-end sm:justify-between">
-      <button type="button" class="btn btn-sm btn-accent-two">
-        Button text
-      </button>
-      <button type="button" class="btn btn-md btn-accent-two">
-        Button text
-      </button>
-      <button type="button" class="btn btn-lg btn-accent-two">
-        Button text
-      </button>
-      <button type="button" class="btn-outline btn-sm btn-outline-accent-two">
-        Button text
-      </button>
-      <button type="button" class="btn-outline btn-md btn-outline-accent-two">
-        Button text
-      </button>
-      <button type="button" class="btn-outline btn-lg btn-outline-accent-two">
-        Button text
-      </button>
+      <button type="button" class="btn btn-sm btn-accent-two">Button text</button>
+      <button type="button" class="btn btn-md btn-accent-two">Button text</button>
+      <button type="button" class="btn btn-lg btn-accent-two">Button text</button>
+      <button type="button" class="btn-outline btn-sm btn-outline-accent-two">Button text</button>
+      <button type="button" class="btn-outline btn-md btn-outline-accent-two">Button text</button>
+      <button type="button" class="btn-outline btn-lg btn-outline-accent-two">Button text</button>
     </div>
 
     <h3 class="text-2xl mt-10">Accent Three</h3>
     <div class="mx-auto space-y-4 flex flex-col items-center justify-start sm:space-y-0 sm:flex-row sm:items-end sm:justify-between">
-      <button type="button" class="btn btn-sm btn-accent-three">
-        Button text
-      </button>
-      <button type="button" class="btn btn-md btn-accent-three">
-        Button text
-      </button>
-      <button type="button" class="btn btn-lg btn-accent-three">
-        Button text
-      </button>
-      <button type="button" class="btn-outline btn-sm btn-outline-accent-three">
-        Button text
-      </button>
-      <button type="button" class="btn-outline btn-md btn-outline-accent-three">
-        Button text
-      </button>
-      <button type="button" class="btn-outline btn-lg btn-outline-accent-three">
-        Button text
-      </button>
+      <button type="button" class="btn btn-sm btn-accent-three">Button text</button>
+      <button type="button" class="btn btn-md btn-accent-three">Button text</button>
+      <button type="button" class="btn btn-lg btn-accent-three">Button text</button>
+      <button type="button" class="btn-outline btn-sm btn-outline-accent-three">Button text</button>
+      <button type="button" class="btn-outline btn-md btn-outline-accent-three">Button text</button>
+      <button type="button" class="btn-outline btn-lg btn-outline-accent-three">Button text</button>
     </div>
 
     <h3 class="text-2xl mt-10">White</h3>
     <div class="mx-auto space-y-4 flex flex-col items-center justify-start sm:space-y-0 sm:flex-row sm:items-end sm:justify-between">
-      <button type="button" class="btn btn-sm btn-white">
-        Button text
-      </button>
-      <button type="button" class="btn btn-md btn-white">
-        Button text
-      </button>
-      <button type="button" class="btn btn-lg btn-white">
-        Button text
-      </button>
-      <button type="button" class="btn-outline btn-sm btn-outline-white">
-        Button text
-      </button>
-      <button type="button" class="btn-outline btn-md btn-outline-white">
-        Button text
-      </button>
-      <button type="button" class="btn-outline btn-lg btn-outline-white">
-        Button text
-      </button>
+      <button type="button" class="btn btn-sm btn-white">Button text</button>
+      <button type="button" class="btn btn-md btn-white">Button text</button>
+      <button type="button" class="btn btn-lg btn-white">Button text</button>
+      <button type="button" class="btn-outline btn-sm btn-outline-white">Button text</button>
+      <button type="button" class="btn-outline btn-md btn-outline-white">Button text</button>
+      <button type="button" class="btn-outline btn-lg btn-outline-white">Button text</button>
     </div>
 
     <h3 class="text-2xl mt-10">Black</h3>
     <div class="mx-auto space-y-4 flex flex-col items-center justify-start sm:space-y-0 sm:flex-row sm:items-end sm:justify-between">
-      <button type="button" class="btn btn-sm btn-black">
-        Button text
-      </button>
-      <button type="button" class="btn btn-md btn-black">
-        Button text
-      </button>
-      <button type="button" class="btn btn-lg btn-black">
-        Button text
-      </button>
-      <button type="button" class="btn-outline btn-sm btn-outline-black">
-        Button text
-      </button>
-      <button type="button" class="btn-outline btn-md btn-outline-black">
-        Button text
-      </button>
-      <button type="button" class="btn-outline btn-lg btn-outline-black">
-        Button text
-      </button>
+      <button type="button" class="btn btn-sm btn-black">Button text</button>
+      <button type="button" class="btn btn-md btn-black">Button text</button>
+      <button type="button" class="btn btn-lg btn-black">Button text</button>
+      <button type="button" class="btn-outline btn-sm btn-outline-black">Button text</button>
+      <button type="button" class="btn-outline btn-md btn-outline-black">Button text</button>
+      <button type="button" class="btn-outline btn-lg btn-outline-black">Button text</button>
     </div>
 
+    <h1 class="text-6xl mb-10 mt-20">Forms</h1>
     <!--[if lte IE 8]>
-							<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
-							<![endif]-->
-							<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-							<h3 class="form-title">Form Title</h3>
-							<script>
-								hbspt.forms.create({
-									portalId: "275827",
-									formId: "a675503d-8554-4164-84a2-bb55066f3c53"
-								});
-							</script>
+    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+    <![endif]-->
+    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+    <h3 class="form-title">Form Title</h3>
+    <script>
+      hbspt.forms.create({
+        portalId: "275827",
+        formId: "a675503d-8554-4164-84a2-bb55066f3c53"
+      });
+    </script>
 
 </div>
 

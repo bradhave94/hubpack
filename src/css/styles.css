@@ -15,7 +15,7 @@
     [type='tel'],
     [type='time'],
     [type='week'] {
-        @apply form-input !w-full border-gray-300
+        @apply form-input !w-full border-gray-300 focus:ring-primary
     }
 
     input[type=file]::file-selector-button {
@@ -23,23 +23,23 @@
     }
 
     textarea {
-        @apply form-textarea !w-full border-gray-300
+        @apply form-textarea !w-full border-gray-300 focus:ring-primary
     }
 
     select {
-        @apply form-select !w-full border-gray-300
+        @apply form-select !w-full border-gray-300 focus:ring-primary
     }
 
     select[multiple] {
-        @apply form-multiselect border-gray-300
+        @apply form-multiselect border-gray-300 focus:ring-primary
     }
 
     [type='checkbox'] {
-        @apply form-checkbox !w-4 !mr-3 rounded border-gray-300
+        @apply form-checkbox !w-4 !mr-3 rounded border-gray-300 text-primary focus:ring-primary hover:checked:bg-primary  checked:bg-primary focus:bg-primary
     }
 
     [type='radio'] {
-        @apply form-radio !w-4 !mr-3 border-gray-300
+        @apply form-radio !w-4 !mr-3 border-gray-300 text-primary focus:ring-primary hover:checked:bg-primary checked:bg-primary focus:bg-primary
     }
 
     blockquote {
@@ -118,5 +118,23 @@
     input[type=submit] {
         @apply btn btn-sm btn-primary
     }
+}
 
+
+
+@layer utilities {
+    button svg {
+        @apply -ml-1 mr-2 h-5 w-5
+    }
+    fieldset.form-columns-2 .input {
+        @apply !mr-4
+    }
+
+    ul {
+        @apply list-disc list-outside pl-[18px]
+    }
+
+    ol {
+        @apply list-decimal list-outside pl-[18px]
+    }
 }

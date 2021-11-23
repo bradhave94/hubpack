@@ -50,5 +50,5 @@ Example:
   font-size: {{ font.font.size / 16 ~ 'rem' }};
   line-height: {% if font.line_height_unit == 'number' %}{{ font.line_height }};{% else %}{{ font.line_height / 16 ~ 'rem' }};{% endif %};
   text-transform: {{ font.transform }};
-  {% if font.letter_spacing != 0 %}letter-spacing: {{font.letter_spacing}}px{% endif %}
+  {% if font.letter_spacing != 0 %}letter-spacing: {{font.letter_spacing}}px;{% endif %}
 {%- endmacro -%}

@@ -62,7 +62,7 @@ module.exports = ({ account, autoupload }) => ({
 			account,
 			autoupload,
 			src: 'dist',
-			dest: 'hs-webpack',
+			dest: 'hubpack',
 		}),
 		new MiniCssExtractPlugin({
 			filename: ({ chunk }) => {

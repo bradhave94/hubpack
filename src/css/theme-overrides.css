@@ -49,12 +49,7 @@
 
 {% set body_color = theme.colors.body_color.color %}
 {% set heading_color = theme.colors.heading.color %}
-
-{% set link_color = {
-  'color': theme.colors.link.color,
-  'hover': theme.colors.link_hover.color,
-  'focus': theme.colors.link_focus.color,
-} %}
+{% set link_color = theme.colors.link.color %}
 
 
 
@@ -64,8 +59,6 @@
 {% set secondary_font = theme.fonts.secondary %}
 
 {% set body_font = theme.typography.base.font %}
-
-{% set anchor_font = theme.typography.links.font %}
 
 /* 1d. Buttons */
 
@@ -141,17 +134,18 @@ small,
 }
 
 a {
-  {{ anchor_font.style }};
-  color: {{ link_color.color }};
+  {{ font_styles(theme.typography.links) }}
+  color: {{ link_color }};
 }
 
-a:hover {
-  color: {{ link_color.hover }};
-}
 
-a:active,
+a:hover,
 a:focus {
-  color: {{ link_color.focus }};
+  color: {{ color_variant(link_color, -40) }};
+}
+
+a:active {
+  color: {{ color_variant(link_color, 40) }};
 }
 
 blockquote,
@@ -198,7 +192,8 @@ h1 {
   {{ font_styles(theme.typography.base) }}
 }
 
-.text-lg {
+.text-lg,
+.large {
   {{ font_styles(theme.typography.lg) }}
 }
 

@@ -1209,24 +1209,65 @@
 								"color": true
 							}
 						},
-						"visibility": {
-							"hidden_subfields": {
-								"size": true
-							}
-						},
 						"inherited_value": {
 							"property_value_paths": {
-								"fallback": "theme.fonts.primary.fallback",
-								"font": "theme.fonts.primary.font",
-								"font_set": "theme.fonts.primary.font_set"
+								"color": "theme.fonts.secondary.color",
+								"fallback": "theme.fonts.secondary.fallback",
+								"font": "theme.fonts.secondary.font",
+								"font_set": "theme.fonts.secondary.font_set"
 							}
 						},
 						"default": {
-							"color": "#0270E0",
+							"size": 16,
+							"size_unit": "px",
 							"styles": {
 								"text-decoration": "none"
-							}
+							},
+							"variant": "600"
 						}
+					},
+					{
+						"name": "line_height",
+						"label": "Line Height",
+						"display": "text",
+						"step": 1,
+						"type": "number",
+						"default": 24
+					},
+					{
+						"label": "Line Height Unit",
+						"name": "line_height_unit",
+						"type": "choice",
+						"required": true,
+						"choices": [
+							["number", "Number"],
+							["px", "px"]
+						],
+						"display": "select",
+						"default": "px"
+					},
+					{
+						"name": "letter_spacing",
+						"label": "Letter Spacing",
+						"display": "text",
+						"help_text": "Value in px",
+						"step": 0.1,
+						"type": "number",
+						"suffix": "px",
+						"default": 0
+					},
+					{
+						"label": "Transform",
+						"name": "transform",
+						"type": "choice",
+						"choices": [
+							["none", "None"],
+							["capitalize", "Capitalize"],
+							["uppercase", "Uppercase"],
+							["lowercase", "Lowercase"]
+						],
+						"display": "select",
+						"default": "none"
 					}
 				]
 			},
